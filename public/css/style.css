@@ -1,0 +1,98 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+ul, li {
+  list-style: none; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #00B7FF; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clearfix {
+  *zoom: 1; }
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+.clearfix:after {
+  clear: both; }
+
+.clear {
+  clear: both; }
+
+#chat-wrapper {
+  height: 300px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #aaa; }
+  #chat-wrapper > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%; }
+  #chat-wrapper li {
+    padding: 10px; }
+  #chat-wrapper #client-list {
+    overflow-y: scroll;
+    position: relative;
+    width: 30%;
+    z-index: 10;
+    background-color: #eee; }
+    #chat-wrapper #client-list ul {
+      -webkit-border-radius: 4px 0 0 0;
+      -moz-border-radius: 4px 0 0 0;
+      border-radius: 4px 0 0 0;
+      font-weight: bold;
+      border-right: 1px solid #aaa; }
+      #chat-wrapper #client-list ul li {
+        border-bottom: 1px solid #bbb; }
+  #chat-wrapper #chat-window {
+    -webkit-border-radius: 0 4px 0 0;
+    -moz-border-radius: 0 4px 0 0;
+    border-radius: 0 4px 0 0;
+    position: relative; }
+    #chat-wrapper #chat-window ul {
+      -webkit-border-radius: 0 4px 0 0;
+      -moz-border-radius: 0 4px 0 0;
+      border-radius: 0 4px 0 0;
+      border-bottom: 2px solid #aaa;
+      height: 245px;
+      overflow-y: scroll; }
+
+#chat-input {
+  width: 60%;
+  margin: 30px auto; }
+  #chat-input h4 {
+    margin: 10px 0; }
+
+#form-new-message {
+  margin-left: 31%;
+  width: 68%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 6px; }
+  #form-new-message textarea,
+  #form-new-message input[type="text"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 90%; }
+  #form-new-message input[type="text"],
+  #form-new-message button {
+    padding: 0 10px;
+    height: 40px; }
+  #form-new-message input[type="text"] {
+    width: 80%; }
+  #form-new-message button {
+    width: 20%; }

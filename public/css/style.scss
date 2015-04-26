@@ -1,0 +1,113 @@
+@import 'mixins';
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+ul,li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+.clearfix {
+  @include clearfix();
+}
+
+.clear {
+  clear: both;
+}
+
+#chat-wrapper {
+  height: 300px;
+  @include roundedCorners(4);
+  border: 1px solid #aaa;
+
+  >div {
+    @include box-sizing(border-box);
+    height: 100%;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  #client-list {
+    overflow-y: scroll;
+    position: relative;
+    width: 30%;
+    z-index: 10;
+    background-color: #eee;
+
+    ul {
+      @include roundedTopLeft(4);
+      font-weight: bold;
+      border-right: 1px solid #aaa;
+
+      li {
+        border-bottom: 1px solid #bbb;
+      }
+    }
+  }
+
+  #chat-window {
+    @include roundedTopRight(4);
+    position: relative;
+
+    ul {
+      @include roundedTopRight(4);
+      border-bottom: 2px solid #aaa;
+      height: 245px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+#chat-input {
+  width: 60%;
+  margin: 30px auto;
+  h4 {
+    margin: 10px 0
+  }
+}
+
+#form-new-message {
+  margin-left: 31%;
+  width: 68%;
+  @include box-sizing(border-box);
+  position: absolute;
+  bottom: 6px;
+
+
+  textarea,
+  input[type="text"] {
+    @include box-sizing(border-box);
+    width: 90%;
+  }
+
+  input[type="text"],
+  button {
+    padding: 0 10px;
+    height: 40px;
+  }
+
+  input[type="text"] {
+    width: 80%;
+  }
+  button {
+    width: 20%;
+  }
+}

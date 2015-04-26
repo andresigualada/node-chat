@@ -1,5 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div(id="content")
+        h1= title
+
+        div(id="chat-wrapper")
+            div(id="client-list" class="pull-left")
+                ul
+
+            div(id="chat-window")
+                ul
+                form(id="form-new-message")
+                    input(type="text", name="input-new-message", id="input-new-message", placeholder="Reply here")
+                    button.
+                        Send
+
+            div(class="clear")
+
